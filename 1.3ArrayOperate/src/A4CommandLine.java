@@ -18,16 +18,16 @@
 
 //我们可以利用接收到的命令行参数，根据不同的参数执行不同的代码。例如，实现一个 -version 参数，打印程序版本号：
 
-//public class A4CommandLine {
-//    public static void main(String[] args) {
-//        for (String arg : args) {
-//            if ("-version".equals(arg)) {
-//                System.out.println("v 1.0");
-//                break;
-//            }
-//        }
-//    }
-//}
+public class A4CommandLine {
+    public static void main(String[] args) {
+        for (String arg : args) {
+            if ("-version".equals(arg)) {
+                System.out.println("v 1.0");
+                break;
+            }
+        }
+    }
+}
 
 /*
 上面这个程序必须在命令行执行，我们先编译它：
