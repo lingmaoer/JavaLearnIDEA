@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavaBase/JavaBase.iml" filepath="$PROJECT_DIR$/JavaBase/JavaBase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/JavaLearnIDEA.iml" filepath="$PROJECT_DIR$/.idea/JavaLearnIDEA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProcessControl/ProcessControl.iml" filepath="$PROJECT_DIR$/ProcessControl/ProcessControl.iml" />
+    </modules>
+  </component>
+</project>
