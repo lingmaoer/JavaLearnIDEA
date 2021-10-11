@@ -1,7 +1,7 @@
 # JavaLearnIDEA
 java学习.通过IDEA进行编译的
 
-##1 Java快速入门
+## 1 Java快速入门
 #### &emsp;1.1 Java基础
 &emsp;&emsp; 1.1.1&emsp;Java类型
 
