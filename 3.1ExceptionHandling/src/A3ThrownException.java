@@ -8,24 +8,24 @@
 //异常的传播
 //当某个方法抛出了异常时，如果当前方法没有捕获异常，异常就会被抛到上层调用方法，直到遇到某个 try ... catch 被捕获为止：
 
-public class A3ThrownException {
-    public static void main(String[] args) {
-        try {
-            process1();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    static void process1() {
-        process2();
-    }
-
-    static void process2() {
-        // 会抛出NumberFormatException
-        Integer.parseInt(null);
-    }
-}
+//public class A3ThrownException {
+//    public static void main(String[] args) {
+//        try {
+//            process1();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    static void process1() {
+//        process2();
+//    }
+//
+//    static void process2() {
+//        // 会抛出NumberFormatException
+//        Integer.parseInt(null);
+//    }
+//}
 
 /*
 通过 printStackTrace() 可以打印出方法的调用栈，类似：
@@ -126,7 +126,7 @@ void process2(String s) {
 //为了能追踪到完整的异常栈，在构造异常的时候，把原始的 Exception 实例传进去，新的 Exception 就可以持有原始 Exception 信息。对上述代码改进如下：
 
 //public class A3ThrownException {
-//    public static void main(String[] args) {
+//    public  static void main(String[] args) {
 //        try {
 //            process1();
 //        } catch (Exception e) {
@@ -266,7 +266,25 @@ Suppressed: java.lang.NumberFormatException: For input string: "abc"
 //如果传入的参数为负，则抛出 IllegalArgumentException。
 
 
+public class A3ThrownException {
+    public static void main(String[] args) {
+        try{
+        System.out.println(tax(2000, 0.1));
+        System.out.println(tax(-200, 0.1));
+        System.out.println(tax(2000, -0.1));
+        }catch (IllegalArgumentException e){
+            e.printStackTrace();
+        }
+    }
 
+    static double tax(int salary, double rate) {
+        // TODO: 如果传入的参数为负，则抛出IllegalArgumentException
+        if(salary<0||rate<0){
+            throw new IllegalArgumentException();
+        }
+        return salary * rate;
+    }
+}
 
 /*
 小结
@@ -275,7 +293,7 @@ Suppressed: java.lang.NumberFormatException: For input string: "abc"
 捕获异常并再次抛出新的异常时，应该持有原始异常信息；
 
 通常不要在 finally 中抛出异常。如果在 finally 中抛出异常，应该原始异常加入到原有异常中。调用方可通过 Throwable.getSuppressed() 获取所有添加的 Suppressed Exception。
- */
+*/
 
 
 
